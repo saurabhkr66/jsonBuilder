@@ -34,8 +34,8 @@ function createField(): FieldTypeSchema {
   };
 }
 
-function buildJson(fields: FieldTypeSchema[]): any {
-  const json: Record<string, any> = {};
+function buildJson(fields: FieldTypeSchema[]): unknown {
+  const json: Record<string, unknown> = {};
   fields.forEach((field) => {
     if (!field.key) return;
     switch (field.type) {
